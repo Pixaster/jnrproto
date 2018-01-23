@@ -134,18 +134,18 @@ if (key_jump_released = 1 &amp;&amp; jump_started = 1 || jump_frames == 20)  //b
 //Wandsprung
 if (place_meeting(x+4,y,obj_wall) &amp;&amp; !place_meeting(x,y+15,obj_wall) &amp;&amp; move_direction == -1 &amp;&amp; key_jump == 1)
          {
-            vsp = -jumpspeed;     //setzt Initial-Sprunggeschwindigkeit
+            vsp = -jumpspeed;     
             hsp = -movespeed/2;
-            jump_started = 1;     //setzt aktiven Sprung
-            jump_frames = 0;     //resetet den framecounter für variable Sprunghöhe
+            jump_started = 1;     
+            jump_frames = 0;     
          }
          
 if (place_meeting(x-4,y,obj_wall) &amp;&amp; !place_meeting(x,y+15,obj_wall) &amp;&amp; move_direction == 1 &amp;&amp; key_jump == 1)
          {
-            vsp = -jumpspeed;     //setzt Initial-Sprunggeschwindigkeit
+            vsp = -jumpspeed;     
             hsp = movespeed/2;
-            jump_started = 1;     //setzt aktiven Sprung
-            jump_frames = 0;     //resetet den framecounter für variable Sprunghöhe
+            jump_started = 1;     
+            jump_frames = 0;     
          }
          
 //Doppelsprung
@@ -153,10 +153,10 @@ if (place_meeting(x-4,y,obj_wall) &amp;&amp; !place_meeting(x,y+15,obj_wall) &am
 if (!place_meeting(x,y+1, obj_wall) &amp;&amp; jump_double == 0 &amp;&amp; key_jump == 1)
                  //wenn nicht in aktivem Sprung
             {
-                vsp = -jumpspeed;     //setzt Initial-Sprunggeschwindigkeit
-                jump_started = 1;     //setzt aktiven Sprung
+                vsp = -jumpspeed;     
+                jump_started = 1;     
                 jump_double = 1;
-                jump_frames = 0;     //resetet den framecounter für variable Sprunghöhe
+                jump_frames = 0;     
             }
 
 // horizontal collision
