@@ -116,14 +116,14 @@ if (place_meeting(x,y+1, obj_wall))
         }
         
 //Sprungtaste gehalten
-if (jump_started = 1 &amp;&amp; jump_frames &lt;= 20) //zählt die frames in, der der Sprung verlängert werden kann
+if (jump_started == 1 &amp;&amp; jump_frames &lt;= 20) //zählt die frames in, der der Sprung verlängert werden kann
     {
             vsp -= 0.45;
             jump_frames += 1;
     }
 
 //Sprungtaste losgelassen
-if (key_jump_released = 1 &amp;&amp; jump_started = 1 || jump_frames == 20)  //beendet sprung wenn taste losgelassen oder 25 frames vorbei
+if (key_jump_released == 1 &amp;&amp; jump_started == 1 || jump_frames == 20)  //beendet sprung wenn taste losgelassen oder 25 frames vorbei
     {
         jump_started = 0;
         key_jump_released = 0;
